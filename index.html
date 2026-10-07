@@ -3,8 +3,13 @@ layout: default
 title: "주간 보고 목록"
 ---
 
-<h2 style="margin-top:0;">📋 주간 업무 보고 목록</h2>
-<p style="color: var(--text-muted); margin-bottom: 20px;">매주 작성된 업무 기록입니다.</p>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+  <div>
+    <h2 style="margin:0;">📋 주간 업무 보고 목록</h2>
+    <p style="color: var(--text-muted); margin: 0;">매주 작성된 업무 기록입니다.</p>
+  </div>
+  <a href="{{ '/write' | relative_url }}" style="background: var(--primary); color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">+ 새 주간보고 작성</a>
+</div>
 
 <div class="post-list">
   {% assign posts = site.weekly | sort: 'date' | reverse %}
