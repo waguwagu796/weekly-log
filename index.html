@@ -1,0 +1,23 @@
+---
+layout: default
+title: "주간 보고 목록"
+---
+
+<h2 style="margin-top:0;">📋 주간 업무 보고 목록</h2>
+<p style="color: var(--text-muted); margin-bottom: 20px;">매주 작성된 업무 기록입니다.</p>
+
+<div class="post-list">
+  {% assign posts = site.weekly | sort: 'date' | reverse %}
+  {% for post in posts %}
+    <div class="post-item">
+      <div>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
+      <div style="color: var(--text-muted); font-size: 0.88rem;">
+        {{ post.date | date: "%Y.%m.%d" }}
+      </div>
+    </div>
+  {% else %}
+    <p style="color: var(--text-muted); padding: 20px 0;">아직 등록된 주간 보고가 없습니다.</p>
+  {% endfor %}
+</div>
