@@ -1,0 +1,13 @@
+title: "Weekly Log"
+description: "주간 업무 진행 및 아카이빙"
+author: "작성자 이름"
+markdown: kramdown
+permalink: /weekly/:year-:month-:day/
+
+collections:
+  weekly:
+    output: true
+    permalink: /:collection/:name/
+
+exclude:
+  - README.md
